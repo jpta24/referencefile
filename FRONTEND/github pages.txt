@@ -1,0 +1,19 @@
+npm i gh-pages
+
+en el package.json debajo de "private"
+    "homepage": "http://jpta24.github.io/My_Portafolio",
+
+en scripts:
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+
+correr en terminal
+    npm predeploy
+    npm deploy
+
+hacer commit y push
+
+
+
+Para personalizar el dominio 
+    https://www.youtube.com/watch?v=M6hBd3Lomvw
