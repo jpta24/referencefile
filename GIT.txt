@@ -1,0 +1,55 @@
+IMPORTANTE de entender
+    GIT esde uso local en tu proyecto
+    GITHUB es remoto en tu cuenta
+
+En Github crear un nuevo repositorio y colocar el nombre
+
+en el proyecto en VS Code, abrir un termianl y en la carpeta del preoyecto general inicial el Github
+    git init 
+    y elegir la carptea donde se va almacenar que debe ser la misma desde donde se inicio el proyecto
+
+    
+se hace el primer commit para crear el commit en nuestra carpeta git
+    desde el icono de GIT se selecciona pasar al stage y luego hacer el commit con un msj
+    commit to start proyect
+    
+una vez creado, crear un branch - normalmente dev de Development
+    en el menu de git darle a los 3 puntos Rama/crear rama y colocar el nombre: dev
+    F1 crear branch - dev
+
+se crea el enlace remoto con Github
+    git remote add origin https://github.com/jpta24/FullStack-MERN-My-Fav-Videos.git
+
+el en icono d3e git de la izquierda se van pasando al Stage y luego el commit a medida que se van haciendo cambios
+
+
+Luego se hace el Push al repositorio remoto
+    git push -u origin main o con el icono en la esquina izquierda abajo
+
+cuando esta listo el branch se pasa al main con Merge
+    git merge branch
+
+PAra eliminar un repositorio desde la carpeta en el terminal usar
+    rm -rf .git
+
+
+crear una rama desde
+    en el menu en los ... 
+    se selecciona crear una rama desde
+    nos pide el nombre de la rama
+    luego pide seleccionar desde que rama se hace (master o dev)
+
+Fusionar rama desde
+    en el menu en los ... 
+    se selecciona fusionar rama desde
+    se selecciona la rama que va a recibir los cambios (dev)
+    se selecciona desde donde se van a recibir los cambios (feature)
+    esquema:
+                         //      C3-C4
+    git checkout develop //     /     \
+    git merge featureB   // C1-C2--C5--C6
+
+
+
+
+    

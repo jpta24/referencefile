@@ -1,0 +1,51 @@
+public
+src 
+    assets // static files
+        fonts
+        images
+        svgs
+    components
+        Button
+            index.js
+            style.scss
+        Footer
+            index.js
+            style.scss
+        navbar
+            index.js
+            style.scss
+    config // STATIC TEXT CONTENT
+        {...} App.json
+        {...} ErrorMessage.json
+    constants
+        routes.js
+        seo.js
+    contexts // Globas State, API calls
+        AppContext.js
+        AuthContext.js
+        ProductContext.js
+        index.js
+    helpers // helper methods
+        formatDate.js
+        formatString.js
+        uuid.js
+    pages // each page has it own folder with index and style
+        About
+            index.js
+            style.scss
+        Home
+            index.js
+            style.scss
+    styles
+        app.scss
+        colors.scss
+        fonts.scss
+        icons.scss
+    App.js
+    index.js
+    styles.css
+.env
+.eslintrc
+.gitignore
+.prettierrc
+package.json

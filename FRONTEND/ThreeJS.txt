@@ -1,0 +1,68 @@
+se instala en un react normal
+se instala 
+    npm i three react-three-fiber
+
+en donde se vaya a usar el canvas se instala   
+    import React , { useRef, useState } from 'react';
+    import { Canvas, useFrame } from 'reat-three-fiber';
+
+en el div del componente se llama 
+    <Canvas>
+
+    <Canvas/>
+
+las geometrias van dentro de un mesh
+la formaGeomtry para identificarla con el
+attach (obligatorio) = geometry
+args= un [] con tamaños de X,Y,Z
+<Canvas>
+    <ambientLight intensity={0.3} />
+    <pointLight position={[10,10,10]} />
+    <mesh rotation={[1,0,0]} position={[10,10,10]}> // rotacion y posicion en mesh X Y Z
+        <boxGeometry attach='geometry' args ={[1,1,1]} /> // forma
+        <meshStandardMaterial attach='material' color='red'/> // materiales
+
+    <mesh/>
+<Canvas/>
+
+se pueden crear componentes en este ejemplo se saca el mesh para una funcion cubo
+
+function Box ({position, color}) {
+    let [expand, setExpand] = useState(false)
+    let refBox = useRef();
+    useFrame(() => {
+        refBox.current.rotation.x = refBox.current.rotation.x += 0.01 // para que le mesh referenciado gire 0.1 mas que el anterior y se quitaria del mesh rotation
+    })
+
+    const handleClick = () => {
+        setExpand(!expand) // set el State Expand al contrario de lo que ya este
+    }
+    return (
+        <mesh ref={refBox} scale={expand ? [1,2,1] : [1,1,1]} /*rotation={[1,0,0]}*/ position={position} onClick={handleClick}> // rotacion y posicion en mesh X Y Z
+            <boxGeometry attach='geometry' args ={[1,1,1]} /> // forma
+            <meshStandardMaterial attach='material' color={color}/> // materiales
+        <mesh/>
+    )
+}
+
+// y el Canvas queda asi
+<Canvas>
+    <ambientLight intensity={0.3} />
+    <pointLight position={[10,10,10]} />
+    <Box position=[-2,0,0] color='red' />
+    <Box position=[2,0.5,0] color='green' />
+<Canvas/>
+
+useFrame() es el equivalente al animate de ThreeJs
+refBox es para dar una referencia para que no se tenag que renderizar a cada moemnto
+
+otras animaciones drei react-spring 
+de drei son los materiales como gelatinosos
+y de react-spring animaciones y el hook de animaciones
+    import { meshBubbleMaterial} from 'drei'
+    import { useSpring, a } from 'react-spring/three'
+
+    para ainmar a la ertiqueta que vamos a animar se le coloca a.mesh quedando asi 
+    <a.mesh>
+    <a.meash />
+

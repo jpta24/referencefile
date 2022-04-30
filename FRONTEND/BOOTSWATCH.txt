@@ -1,0 +1,46 @@
+boostwatch
+    npm i bootswatch para estilizar
+    se importa 
+    import 'bootswatch/dist/pulse/boostrap.min.css'; al final eleguimos el que nos guste 
+
+    Cuando copiemos codigo desde boostwatch pasarlo por unconvertidor de codigo ej:
+    https://magic.reactjs.net/htmltojsx.htm
+
+    copiar desde nav a nav
+
+    y cambiar las etiquetas a por link 
+
+    import {Link} from 'react-router-dom'
+
+    <a por <Link
+    </a> por </Link>
+
+    y los href="#" por to="/"
+
+    quitar los botones que no vayamos a usar, cambiar el nombre en los que vayamos a usar
+
+    para ajustar hacia los extremos colocar 
+    <ul className='navbar-nav ml-auto'>
+
+    className
+        regla de boostrap
+            container
+                row
+                    col
+                    .col-md-4.offset-md-4 (columna con 4 y espaciado de 4 para que quede centrado)
+                        .card
+                            .card-body
+        
+        
+        <div className='form-group'> para darle un espaciado arriba y abajo para que no esten juntos
+
+        <input
+            className='form-control m-2' para darle un formato al input con un recuadro afuera
+        
+        className='d-flex justify-content-between'> para usar clases de flexbox y colocar espacio entre elementos
+        
+        inline Style 
+            style={{cursor:'pointer'}}
+
+        embed 
+            Para meter un video dentro de un espacio del parent

@@ -1,0 +1,10 @@
+Mongo Borrar una BD - abrir una terminal
+    mongo
+    use dbName;
+    db.dropDatabase();
+    exit
+
+db.collection.drop() - borrar una collection
+
+db.collection.remove() -  borrar todos los documentos de una collection
+

@@ -1,0 +1,82 @@
+TODA LA EXPLICACION ESTA EN EL VIDEO de FAZT 
+    https://www.youtube.com/watch?v=_RZ-T6TxP7w
+
+IMPORTANTE simbolo backtick `
+
+- Colocar con peacock el color Amarillo o el de preferencia
+
+- abrir un terminal en la caperta API y escribir para crear un package.json del api
+    npm init -y
+
+- Instalar dependencias con 
+    npm install express mongoose morgan dotenv cors colors bcryptjs jsonwebtoken helmet
+
+        express para crear servidor
+        mongoose paraconectar con DB
+        morgan para porder ver en consola del servidor lo que vaya ocurriendo
+        dotenv para reiniciar servidor automaticamente cuando se guarde y hayan cambios
+        cors para conectar con otros servidores 
+        colors para poder poner color a la consola de node
+        bcryptjs para poder cifrar la contraseña de usuarios
+        jsonwebtoken para autenticar usuarios en nuestra API
+        helmet para darle seguridad al proyecto
+
+- Instalar en modo desarrolo los types de cada dependencia y el ts-node-dev para reiniciar el servidor cada vez que se guarden cambios
+    npm i -D typescript @types/express @types/mongoose @types/morgan @types/cors @types/node ts-node-dev @types/bcryptjs @types/colors @types/helmet @types/jsonwebtoken
+    
+- en el terminal correr para instalar de forma local el compilador de ts y se creara un archivo tsconfig.json
+    npx tsc --init
+
+- en el archivo tsconfig.json modificar, quitar los // antes de outDir y rootDir
+    "target": "es6",
+    "outDir" : "./dist",
+    "rootDir" : "./src",
+
+- en el package.json eliminar el script/test y poner estos 2
+    "build" : "tsc",
+    "dev": "ts-node-dev src/index.ts"
+
+en el terminal correr para verificar que el servidor este corriendo
+    npm run dev
+
+verificar que mongoDB este funcionando, abriendo otra terminal en windows cmd escribir 
+    mongod --version
+
+En el archivo config.ts colocar los datos necesarios
+    MONGO_DATABASE: 'XXXXX',
+
+
+Iniciar Git // si aun no se ha iniciado
+
+Para definir los datos a almacenar en la DB (modelo) se configuran en el archivo Video.ts el cual se le puede cambiar el nombre para los datos de nuestra App
+
+En el archivo videos.controller.ts estan las funciones que usaran cada metodo GET, POST, DELETE, UPDATE en el archivo siguiente, 
+
+En el archivo videos.routes.ts se definen las rutas, metodos y collection que se llaman las fuinciones del archivo anterior,
+
+en el archivo videos.http se prueban los metodos definidos en videos.routes.ts, los metodos que requieren id deben tenerlo despues de la ruta, los que requieren enviar alguna informacion deben describirla
+
+codigos de status
+    200 solicitus con exito (default)
+    201 un nuevo recurso se ha creado
+    204 peticion se ha realizado con exito pero no tiene respusta
+
+Instalar jquery en Backend
+    npm install jquery jsdom
+
+    npm i --save-dev @types/jquery @types/jsdom
+    
+    usar archivo Examples/exJquery.json
+
+Importar JS a TS
+    en tsconfig.json
+        {
+        "compilerOptions": {
+            "allowJs": true
+            }
+        }
+
+Destructuracion de un objeto
+    const { link, keyWord, checked } = req.body;
+
+ABRIR archivo de REACT y metodos REACT

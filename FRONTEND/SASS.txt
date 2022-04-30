@@ -1,0 +1,59 @@
+npm i sass --save
+
+usar extension .scss
+
+import './styles/styles.scss'
+
+declarar variables
+    $colorbg: red;
+    $w1: 200px;
+    $w2: $w1 + 20px;
+
+    uso
+    body {
+        background: $colorbg;
+        max-width: $w2;  
+    }
+
+Nesting - anidado (se puede aplicar a elementos y las mismmas propiedades dentro de uno mismo ejemplo background, text, border, etc)
+    ul {
+        background: black;
+
+        li {
+            border: 2px solid black;
+            border-radius: 3px;
+
+            a {
+                color: red;
+                text{
+                   decoration:none; 
+                   transform: uppercase
+                }
+            }
+        }
+    }
+
+Partials se debe inicial con _ejemplo.scss
+    se colocar el codigo a usar y luego en el archivo donde se va a usar se llama sin el_ ni la extension
+
+    @import "./styles/ejemplo"
+
+Mixing son funciones que incluyen codigo y pueden llevar paramatros (si no lleva parametros no hacen falta los () al momento de declarar la funcion mixing)
+    @mixing fontStyle($color) {
+        color: white;
+        background: $color;
+    }
+
+    h1 {
+        font-size: 40px;
+        @include fontStyle(red);
+    }
+
+uso de operadores + - * /
+
+
+
+   
+    
+
+

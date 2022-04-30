@@ -1,0 +1,121 @@
+IMPORTANTE simbolo backtick `
+
+inline Style 
+    style={{cursor:'pointer'}}
+
+Displey Flex - alineacion de elementos - horizontal
+    display: flex;      en el contenedor padre hace que todos los elementos esten uno al lado del otro
+
+    flex: none;         en el elemnto hijo le dice que esten al lado pero no que se junten dentro del
+                         mismo espacio
+
+Background con Imagen
+    .hero {
+        display: flex;
+        flex: none; /*
+        width: 100vw;*/
+        min-height: 570px;
+        background: url(./Components/Body/Assets/Img/Some/coding\ bg2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+Scroll Y 
+    html {
+        scroll-snap-type: y mandatory;
+        scroll-snap-stop: always;
+        overflow-y: scroll;
+    }
+
+    .scrollY {
+        scroll-snap-align: start;
+        scroll-margin-top: 70px;
+    }
+
+padding line
+    padding: 0px 1px 2px 3px;   up right down left
+
+font line
+    font: italic small-caps bold 34px/100px "Times New Roman", times, serif;
+          style   variant  weight size/line           family
+          (      Opcional       ) (        mandatory       )    
+
+
+Hover con scale y sombra (aumento)
+
+    .cardx:hover {
+        box-shadow: 5px 10px 20px 1px rgb(34, 34, 34) !important;
+        transition: all 0.3s linear !important;
+        -webkit-transition: all 0.3s linear !important;
+        -moz-transition: all 0.3s linear !important;
+        -ms-transition: all 0.3s linear !important;
+        -o-transition: all 0.3s linear !important;
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+    }
+
+h3 alineado verticalmente
+
+    display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+media screen 
+    /* On screens that are 600px or less, set the background color to olive */
+    @media screen and (max-width: 600px) {
+        body {
+            background-color: olive;
+        }
+    }
+
+Inbox shadow
+    box-shadow: inset 0px 0px 20px rgba(255, 232, 198, 0.582);
+
+Css en descendientes
+
+.padre:hover .hijo {
+	stroke: rgba(245, 245, 245, 0.616);
+}
+
+transition
+    out (normal)
+    transition: all 0.2s ease-in-out !important;
+	-webkit-transition: all 0.2s ease-in-out !important;
+	-moz-transition: all 0.2s ease-in-out !important;
+	-ms-transition: all 0.2s ease-in-out !important;
+	-o-transition: all 0.2s ease-in-out !important;
+
+    hover o in
+    transition: all 0.3s linear !important;
+	-webkit-transition: all 0.3s linear !important;
+	-moz-transition: all 0.3s linear !important;
+	-ms-transition: all 0.3s linear !important;
+	-o-transition: all 0.3s linear !important;
+
+quitar subrayado de a: links
+    a:hover {
+        text-decoration: none;
+    }
+
+Tooltip
+        .react-tooltip-lite {
+        background: rgba(15, 108, 122, 0.9);
+        color: whitesmoke;
+        font-size: small;
+        padding: 2px;
+        text-align: center;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        }
+
+        .react-tooltip-lite-arrow {
+            border-color: rgba(15, 108, 122, 0.9);
+        }
